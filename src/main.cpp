@@ -2,6 +2,7 @@
 #include "build_node.hpp"
 #include "file_watcher.hpp"
 #include "hash_store.hpp"
+#include "http_server.hpp"
 #include "processor.hpp"
 #include "thread_pool.hpp"
 
@@ -21,6 +22,7 @@ static void print_usage(const char* argv0) {
     std::cout
         << "Usage: " << argv0 << " [OPTIONS] <source-dir> <output-dir>\n\n"
         << "  --watch          Rebuild automatically when source files change\n"
+        << "  --serve [PORT]   Serve the output directory (default port: 8080)\n"
         << "  --jobs N         Worker thread count (default: hardware concurrency)\n"
         << "  --cache FILE     Path to cache file (default: .incrust_cache)\n"
         << "  --help           Show this message\n";
@@ -114,6 +116,7 @@ static void scan_site(BuildGraph<BuildNode>& graph,
 int main(int argc, char* argv[]) {
     // ── Argument parsing ──────────────────────────────────────────────────────
     bool        watch_mode  = false;
+    int         serve_port  = 0;    // 0 = don't serve
     std::size_t jobs        = std::thread::hardware_concurrency();
     fs::path    cache_path  = ".incrust_cache";
     fs::path    source_dir;
@@ -123,6 +126,12 @@ int main(int argc, char* argv[]) {
         std::string_view arg(argv[i]);
         if (arg == "--watch") {
             watch_mode = true;
+        } else if (arg == "--serve") {
+            // Optional port number immediately follows --serve.
+            if (i + 1 < argc && std::isdigit(static_cast<unsigned char>(argv[i + 1][0])))
+                serve_port = std::stoi(argv[++i]);
+            else
+                serve_port = 8080;
         } else if (arg == "--jobs" && i + 1 < argc) {
             jobs = static_cast<std::size_t>(std::stoul(argv[++i]));
         } else if (arg == "--cache" && i + 1 < argc) {
@@ -176,7 +185,23 @@ int main(int argc, char* argv[]) {
     store.save(cache_path);
     std::cout << "[incrust] build complete.\n";
 
-    if (!watch_mode) return 0;
+    // ── HTTP server (optional) ────────────────────────────────────────────────
+    // Constructed here so it outlives both the watch loop and its own jthread.
+    std::unique_ptr<HttpServer> server;
+    if (serve_port > 0) {
+        server = std::make_unique<HttpServer>(output_dir, serve_port);
+        server->start();
+    }
+
+    if (!watch_mode && !server) return 0;
+
+    // If serving but not watching, just block until Ctrl-C.
+    if (!watch_mode) {
+        std::cout << "[incrust] serving — press Ctrl-C to quit\n";
+        // Park the main thread; the server jthread runs independently.
+        std::this_thread::sleep_until(std::chrono::steady_clock::time_point::max());
+        return 0;
+    }
 
     // ── Watch loop ────────────────────────────────────────────────────────────
     std::cout << "[incrust] watching for changes (Ctrl-C to quit)...\n";

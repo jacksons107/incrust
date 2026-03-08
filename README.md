@@ -40,6 +40,15 @@ cmake --build .
 # Watch mode — rebuilds when any source file changes
 ./build/incrust demo_site output --watch
 
+# Build and preview in a browser (default port 8080)
+./build/incrust demo_site output --serve
+
+# Watch AND serve simultaneously — edit a file and refresh the browser
+./build/incrust demo_site output --watch --serve
+
+# Custom port
+./build/incrust demo_site output --serve 3000
+
 # Options
 ./build/incrust --help
 ```
@@ -48,10 +57,15 @@ cmake --build .
 Usage: incrust [OPTIONS] <source-dir> <output-dir>
 
   --watch          Rebuild automatically when source files change
+  --serve [PORT]   Serve the output directory (default port: 8080)
   --jobs N         Worker thread count (default: hardware concurrency)
   --cache FILE     Path to cache file (default: .incrust_cache)
   --help           Show this message
 ```
+
+When `--serve` is active, open [http://localhost:8080/content/index.html](http://localhost:8080/content/index.html)
+in your browser. The CSS uses absolute paths, so the site must be served — opening
+the HTML files directly from the filesystem will not load styles correctly.
 
 ---
 
@@ -110,10 +124,13 @@ main.cpp
   │
   ├─► HashStore             Load / save .incrust_cache
   ├─► ThreadPool            Fixed pool of std::jthread workers
-  └─► BuildGraph<BuildNode> Topo-sort → parallel rebuild → cache update
-        │
-        └─► FileWatcher (--watch only)
-              std::jthread poll loop → dirty_queue → mark_dirty → rebuild
+  ├─► BuildGraph<BuildNode> Topo-sort → parallel rebuild → cache update
+  │     │
+  │     └─► FileWatcher (--watch only)
+  │           std::jthread poll loop → dirty_queue → mark_dirty → rebuild
+  │
+  └─► HttpServer (--serve only)
+        std::jthread + httplib → serves output dir on localhost
 ```
 
 ### Source files
@@ -127,7 +144,8 @@ main.cpp
 | `hash_store.hpp` | FNV-1a file hashing, flat key=value cache persistence |
 | `thread_pool.hpp` | Fixed `std::jthread` worker pool with `std::condition_variable` barrier |
 | `file_watcher.hpp` | `std::jthread` poll loop, `std::mutex`-guarded dirty queue |
-| `main.cpp` | CLI, site scanner, initial build, optional watch loop |
+| `http_server.hpp` | RAII HTTP server — `std::jthread` + `std::stop_callback` shutdown |
+| `main.cpp` | CLI, site scanner, initial build, optional watch/serve loop |
 
 ---
 
@@ -202,6 +220,22 @@ watcher_thread_ = std::jthread([this](std::stop_token st) {
     poll_loop(st);
 });
 ```
+
+The `HttpServer` takes this one step further with `std::stop_callback` (also
+C++20), which registers a callable that fires automatically when the stop token
+is triggered — no polling, no flag variable:
+
+```cpp
+// http_server.hpp
+server_thread_ = std::jthread([this](std::stop_token st) {
+    std::stop_callback on_stop(st, [this] { svr_.stop(); });
+    svr_.listen("localhost", port_);   // blocks until svr_.stop() is called
+});
+```
+
+When the `HttpServer` is destroyed, the jthread destructor requests a stop,
+`on_stop` fires synchronously and calls `svr_.stop()`, the listen loop exits,
+and the thread joins — all in the correct order with no manual coordination.
 
 ### `std::mutex` and `std::condition_variable` — producer/consumer
 
@@ -309,6 +343,25 @@ The built-in renderer handles:
 - Horizontal rules (`---`)
 - Blank-line delimited paragraphs
 - HTML entity escaping (`&`, `<`, `>`, `"`)
+
+---
+
+## Local preview server
+
+The `--serve` flag starts an HTTP server that mounts the output directory at
+`/` and serves files to the browser. It is implemented in `src/http_server.hpp`
+using [cpp-httplib](https://github.com/yhirose/cpp-httplib), a single-header
+library that is downloaded automatically at CMake configure time if not already
+present in `src/vendor/`.
+
+The server runs on its own `std::jthread` so it never blocks the main thread.
+This means `--serve` and `--watch` can run simultaneously: the watcher thread
+detects changes, the thread pool rebuilds affected nodes, and the browser can
+be refreshed to see the result — all concurrently.
+
+Shutdown is handled via `std::stop_callback`: when the process exits and the
+`HttpServer` destructor runs, the jthread's stop token fires, the callback calls
+`svr_.stop()`, and the listener unblocks and joins cleanly.
 
 ---
 
