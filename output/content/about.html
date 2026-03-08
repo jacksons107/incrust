@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>about — Incrust Demo</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav><a href="/index.html">Home</a> · <a href="/content/about.html">About</a></nav>
+    <h1>Incrust Demo Site</h1>
+  </header>
+  <main>
+    <h1>About Incrust</h1>
+<p>Incrust is a course project demonstrating <strong>modern C++20</strong> features including:</p>
+<ul>
+<li><code>unique_ptr</code> ownership throughout — no raw <code>new</code> or <code>delete</code></li>
+<li><code>BuildGraph&lt;NodeT&gt;</code> — a templated DAG constrained by a C++20 concept</li>
+<li><code>std::jthread</code> workers — auto-joining threads with stop-token support</li>
+<li><code>std::mutex</code> and <code>std::condition_variable</code> — producer/consumer coordination</li>
+<li><code>std::atomic&lt;bool&gt;</code> — lock-free shutdown signalling</li>
+<li><code>std::function&lt;void()&gt;</code> — type-erased build actions</li>
+<li><code>std::filesystem</code> — portable path and directory operations</li>
+<li><code>std::ranges::all_of</code> — range algorithms over dependency lists</li>
+</ul>
+<h2>Architecture</h2>
+<pre><code>BuildGraph&lt;BuildNode&gt;
+  ├── MarkdownNode  ──► MarkdownProcessor
+  ├── TemplateNode  ──► TemplateProcessor
+  └── AssetNode     ──► CopyProcessor
+
+FileWatcher (jthread)
+  └── dirty_queue (mutex + condition_variable)
+        └── main thread → mark_dirty() → rebuild_all()
+
+ThreadPool (vector&lt;jthread&gt;)
+  └── task queue (mutex + condition_variable)
+</code></pre>
+<h2>Design decisions</h2>
+<p><strong>Why FNV-1a for hashing?</strong> No external dependencies, constant memory, and more than sufficient collision resistance for change detection on a local filesystem.</p>
+<p><strong>Why a flat cache file?</strong> Plain text key=value pairs are easy to inspect, diff, and delete. A corrupt cache is never fatal — Incrust simply rebuilds everything.</p>
+
+  </main>
+  <footer>
+    <p>Built with <strong>Incrust</strong> — incremental SSG in modern C++20</p>
+  </footer>
+</body>
+</html>

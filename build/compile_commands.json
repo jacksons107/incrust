@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/jacksonslipock/Desktop/incrust/build",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++  -I/Users/jacksonslipock/Desktop/incrust/src -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wno-unused-parameter -o CMakeFiles/incrust.dir/src/main.cpp.o -c /Users/jacksonslipock/Desktop/incrust/src/main.cpp",
+  "file": "/Users/jacksonslipock/Desktop/incrust/src/main.cpp",
+  "output": "CMakeFiles/incrust.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/jacksonslipock/Desktop/incrust/build",
+  "command": "/opt/homebrew/opt/llvm/bin/clang++  -I/Users/jacksonslipock/Desktop/incrust/src -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -Wno-unused-parameter -o CMakeFiles/incrust.dir/src/processor.cpp.o -c /Users/jacksonslipock/Desktop/incrust/src/processor.cpp",
+  "file": "/Users/jacksonslipock/Desktop/incrust/src/processor.cpp",
+  "output": "CMakeFiles/incrust.dir/src/processor.cpp.o"
+}
+]

@@ -1,0 +1,1 @@
+/opt/homebrew/opt/llvm/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/incrust.dir/src/main.cpp.o CMakeFiles/incrust.dir/src/processor.cpp.o -o incrust

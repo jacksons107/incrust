@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>index — Incrust Demo</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav><a href="/index.html">Home</a> · <a href="/content/about.html">About</a></nav>
+    <h1>Incrust Demo Site</h1>
+  </header>
+  <main>
+    <h1>Welcome to Incrust</h1>
+<p>Incrust is an <strong>incremental static site generator</strong> written in modern C++20.</p>
+<h2>Features</h2>
+<ul>
+<li>Incremental builds — only changed files are rebuilt</li>
+<li>Parallel processing via a <code>std::jthread</code> thread pool</li>
+<li>Dependency-aware DAG with topological ordering</li>
+<li>File watching with a producer/consumer queue</li>
+<li>Zero runtime dependencies</li>
+</ul>
+<h2>How it works</h2>
+<p>Incrust scans your <code>content/</code>, <code>templates/</code>, and <code>assets/</code> directories and constructs a <strong>build graph</strong>.  Each node stores its source path, output path, dependencies, and a build action wrapped in a <code>std::function&lt;void()&gt;</code>.</p>
+<p>Before rebuilding any node, Incrust hashes the source file using FNV-1a. If the hash matches the value stored in <code>.incrust_cache</code>, the node is skipped — saving time on large sites.</p>
+<p>Independent nodes are dispatched concurrently to a fixed thread pool backed by <code>std::jthread</code> workers.</p>
+<hr>
+<p>Get started by editing the files in <code>demo_site/content/</code> and re-running:</p>
+<pre><code>./incrust demo_site output
+</code></pre>
+
+  </main>
+  <footer>
+    <p>Built with <strong>Incrust</strong> — incremental SSG in modern C++20</p>
+  </footer>
+</body>
+</html>

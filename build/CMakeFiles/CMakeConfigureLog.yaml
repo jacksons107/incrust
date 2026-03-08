@@ -1,0 +1,2193 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/uname"
+      - "/opt/homebrew/opt/llvm/bin/uname"
+      - "/opt/homebrew/opt/postgresql@18/bin/uname"
+      - "/opt/homebrew/opt/openjdk/bin/uname"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/uname"
+      - "/Applications/Racket v8.18/bin/uname"
+      - "/Users/jacksonslipock/.amplify/bin/uname"
+      - "/Users/jacksonslipock/.cabal/bin/uname"
+      - "/Users/jacksonslipock/.ghcup/bin/uname"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/uname"
+      - "/Users/jacksonslipock/miniforge3/bin/uname"
+      - "/Users/jacksonslipock/.nix-profile/bin/uname"
+      - "/nix/var/nix/profiles/default/bin/uname"
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Darwin - 23.5.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/gmake"
+      - "/opt/homebrew/opt/llvm/bin/gmake"
+      - "/opt/homebrew/opt/postgresql@18/bin/gmake"
+      - "/opt/homebrew/opt/openjdk/bin/gmake"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/gmake"
+      - "/Applications/Racket v8.18/bin/gmake"
+      - "/Users/jacksonslipock/.amplify/bin/gmake"
+      - "/Users/jacksonslipock/.cabal/bin/gmake"
+      - "/Users/jacksonslipock/.ghcup/bin/gmake"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/gmake"
+      - "/Users/jacksonslipock/miniforge3/bin/gmake"
+      - "/Users/jacksonslipock/.nix-profile/bin/gmake"
+      - "/nix/var/nix/profiles/default/bin/gmake"
+    found: "/opt/homebrew/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/opt/llvm/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/4.2.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/opt/homebrew/opt/llvm/bin/clang++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 541 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 86 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 87 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 206 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/Availability.h" 1 3 4
+        # 177 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 176 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 177 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 178 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/Availability.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/ar"
+      - "/Users/jacksonslipock/.opam/compiler/bin/ar"
+      - "/opt/homebrew/opt/postgresql@18/bin/ar"
+      - "/opt/homebrew/opt/openjdk/bin/ar"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/ar"
+      - "/Applications/Racket v8.18/bin/ar"
+      - "/Users/jacksonslipock/.amplify/bin/ar"
+      - "/Users/jacksonslipock/.cabal/bin/ar"
+      - "/Users/jacksonslipock/.ghcup/bin/ar"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/ar"
+      - "/Users/jacksonslipock/miniforge3/bin/ar"
+      - "/Users/jacksonslipock/.nix-profile/bin/ar"
+      - "/nix/var/nix/profiles/default/bin/ar"
+      - "/opt/homebrew/bin/ar"
+      - "/opt/homebrew/sbin/ar"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/ar"
+      - "/usr/local/bin/ar"
+      - "/System/Cryptexes/App/usr/bin/ar"
+    found: "/usr/bin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/strip"
+      - "/Users/jacksonslipock/.opam/compiler/bin/strip"
+      - "/opt/homebrew/opt/postgresql@18/bin/strip"
+      - "/opt/homebrew/opt/openjdk/bin/strip"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/strip"
+      - "/Applications/Racket v8.18/bin/strip"
+      - "/Users/jacksonslipock/.amplify/bin/strip"
+      - "/Users/jacksonslipock/.cabal/bin/strip"
+      - "/Users/jacksonslipock/.ghcup/bin/strip"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/strip"
+      - "/Users/jacksonslipock/miniforge3/bin/strip"
+      - "/Users/jacksonslipock/.nix-profile/bin/strip"
+      - "/nix/var/nix/profiles/default/bin/strip"
+      - "/opt/homebrew/bin/strip"
+      - "/opt/homebrew/sbin/strip"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/strip"
+      - "/usr/local/bin/strip"
+      - "/System/Cryptexes/App/usr/bin/strip"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/ld"
+      - "/Users/jacksonslipock/.opam/compiler/bin/ld"
+      - "/opt/homebrew/opt/postgresql@18/bin/ld"
+      - "/opt/homebrew/opt/openjdk/bin/ld"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/ld"
+      - "/Applications/Racket v8.18/bin/ld"
+      - "/Users/jacksonslipock/.amplify/bin/ld"
+      - "/Users/jacksonslipock/.cabal/bin/ld"
+      - "/Users/jacksonslipock/.ghcup/bin/ld"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/ld"
+      - "/Users/jacksonslipock/miniforge3/bin/ld"
+      - "/Users/jacksonslipock/.nix-profile/bin/ld"
+      - "/nix/var/nix/profiles/default/bin/ld"
+      - "/opt/homebrew/bin/ld"
+      - "/opt/homebrew/sbin/ld"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/ld"
+      - "/usr/local/bin/ld"
+      - "/System/Cryptexes/App/usr/bin/ld"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-nm"
+      - "nm"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-nm"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objdump"
+      - "objdump"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-objdump"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-readelf"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-dlltool"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    found: "/opt/homebrew/opt/llvm/bin/llvm-addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/opt/llvm/bin/tapi"
+      - "/Users/jacksonslipock/.opam/compiler/bin/tapi"
+      - "/opt/homebrew/opt/postgresql@18/bin/tapi"
+      - "/opt/homebrew/opt/openjdk/bin/tapi"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/tapi"
+      - "/Applications/Racket v8.18/bin/tapi"
+      - "/Users/jacksonslipock/.amplify/bin/tapi"
+      - "/Users/jacksonslipock/.cabal/bin/tapi"
+      - "/Users/jacksonslipock/.ghcup/bin/tapi"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/tapi"
+      - "/Users/jacksonslipock/miniforge3/bin/tapi"
+      - "/Users/jacksonslipock/.nix-profile/bin/tapi"
+      - "/nix/var/nix/profiles/default/bin/tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/usr/local/go/bin/tapi"
+      - "/Users/jacksonslipock/.cargo/bin/tapi"
+      - "/Users/jacksonslipock/.local/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:26 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "LLVM archiver"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ar-22.1"
+      - "llvm-ar-22"
+      - "llvm-ar22"
+      - "llvm-ar"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ar-22.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ar-22.1"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ar-22.1"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ar-22.1"
+      - "/Applications/Racket v8.18/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ar-22.1"
+      - "/nix/var/nix/profiles/default/bin/llvm-ar-22.1"
+      - "/opt/homebrew/bin/llvm-ar-22.1"
+      - "/opt/homebrew/sbin/llvm-ar-22.1"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ar-22.1"
+      - "/usr/local/bin/llvm-ar-22.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-22.1"
+      - "/usr/bin/llvm-ar-22.1"
+      - "/bin/llvm-ar-22.1"
+      - "/usr/sbin/llvm-ar-22.1"
+      - "/sbin/llvm-ar-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-22.1"
+      - "/Library/Apple/usr/bin/llvm-ar-22.1"
+      - "/usr/local/go/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ar-22.1"
+      - "/Users/jacksonslipock/.local/bin/llvm-ar-22.1"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ar-22"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ar-22"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ar-22"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ar-22"
+      - "/Applications/Racket v8.18/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ar-22"
+      - "/nix/var/nix/profiles/default/bin/llvm-ar-22"
+      - "/opt/homebrew/bin/llvm-ar-22"
+      - "/opt/homebrew/sbin/llvm-ar-22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ar-22"
+      - "/usr/local/bin/llvm-ar-22"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar-22"
+      - "/usr/bin/llvm-ar-22"
+      - "/bin/llvm-ar-22"
+      - "/usr/sbin/llvm-ar-22"
+      - "/sbin/llvm-ar-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar-22"
+      - "/Library/Apple/usr/bin/llvm-ar-22"
+      - "/usr/local/go/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ar-22"
+      - "/Users/jacksonslipock/.local/bin/llvm-ar-22"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ar22"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ar22"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ar22"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ar22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ar22"
+      - "/Applications/Racket v8.18/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ar22"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ar22"
+      - "/nix/var/nix/profiles/default/bin/llvm-ar22"
+      - "/opt/homebrew/bin/llvm-ar22"
+      - "/opt/homebrew/sbin/llvm-ar22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ar22"
+      - "/usr/local/bin/llvm-ar22"
+      - "/System/Cryptexes/App/usr/bin/llvm-ar22"
+      - "/usr/bin/llvm-ar22"
+      - "/bin/llvm-ar22"
+      - "/usr/sbin/llvm-ar22"
+      - "/sbin/llvm-ar22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ar22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ar22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ar22"
+      - "/Library/Apple/usr/bin/llvm-ar22"
+      - "/usr/local/go/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ar22"
+      - "/Users/jacksonslipock/.local/bin/llvm-ar22"
+    found: "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ar"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:38 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "Generate index for LLVM archive"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-ranlib-22.1"
+      - "llvm-ranlib-22"
+      - "llvm-ranlib22"
+      - "llvm-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ranlib-22.1"
+      - "/Applications/Racket v8.18/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ranlib-22.1"
+      - "/nix/var/nix/profiles/default/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/sbin/llvm-ranlib-22.1"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ranlib-22.1"
+      - "/usr/local/bin/llvm-ranlib-22.1"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-22.1"
+      - "/usr/bin/llvm-ranlib-22.1"
+      - "/bin/llvm-ranlib-22.1"
+      - "/usr/sbin/llvm-ranlib-22.1"
+      - "/sbin/llvm-ranlib-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-22.1"
+      - "/Library/Apple/usr/bin/llvm-ranlib-22.1"
+      - "/usr/local/go/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ranlib-22.1"
+      - "/Users/jacksonslipock/.local/bin/llvm-ranlib-22.1"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ranlib-22"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ranlib-22"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ranlib-22"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ranlib-22"
+      - "/Applications/Racket v8.18/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ranlib-22"
+      - "/nix/var/nix/profiles/default/bin/llvm-ranlib-22"
+      - "/opt/homebrew/bin/llvm-ranlib-22"
+      - "/opt/homebrew/sbin/llvm-ranlib-22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ranlib-22"
+      - "/usr/local/bin/llvm-ranlib-22"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib-22"
+      - "/usr/bin/llvm-ranlib-22"
+      - "/bin/llvm-ranlib-22"
+      - "/usr/sbin/llvm-ranlib-22"
+      - "/sbin/llvm-ranlib-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib-22"
+      - "/Library/Apple/usr/bin/llvm-ranlib-22"
+      - "/usr/local/go/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ranlib-22"
+      - "/Users/jacksonslipock/.local/bin/llvm-ranlib-22"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ranlib22"
+      - "/opt/homebrew/opt/llvm/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/llvm-ranlib22"
+      - "/opt/homebrew/opt/postgresql@18/bin/llvm-ranlib22"
+      - "/opt/homebrew/opt/openjdk/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/llvm-ranlib22"
+      - "/Applications/Racket v8.18/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.amplify/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.cabal/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.ghcup/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/miniforge3/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.nix-profile/bin/llvm-ranlib22"
+      - "/nix/var/nix/profiles/default/bin/llvm-ranlib22"
+      - "/opt/homebrew/bin/llvm-ranlib22"
+      - "/opt/homebrew/sbin/llvm-ranlib22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/llvm-ranlib22"
+      - "/usr/local/bin/llvm-ranlib22"
+      - "/System/Cryptexes/App/usr/bin/llvm-ranlib22"
+      - "/usr/bin/llvm-ranlib22"
+      - "/bin/llvm-ranlib22"
+      - "/usr/sbin/llvm-ranlib22"
+      - "/sbin/llvm-ranlib22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/llvm-ranlib22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/llvm-ranlib22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/llvm-ranlib22"
+      - "/Library/Apple/usr/bin/llvm-ranlib22"
+      - "/usr/local/go/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.cargo/bin/llvm-ranlib22"
+      - "/Users/jacksonslipock/.local/bin/llvm-ranlib22"
+    found: "/opt/homebrew/Cellar/llvm/22.1.0/bin/llvm-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-22.1"
+      - "clang-scan-deps-22"
+      - "clang-scan-deps22"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.opam/compiler/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/opt/postgresql@18/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/opt/openjdk/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/clang-scan-deps-22.1"
+      - "/Applications/Racket v8.18/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.amplify/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.cabal/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.ghcup/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/miniforge3/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.nix-profile/bin/clang-scan-deps-22.1"
+      - "/nix/var/nix/profiles/default/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/sbin/clang-scan-deps-22.1"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/clang-scan-deps-22.1"
+      - "/usr/local/bin/clang-scan-deps-22.1"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-22.1"
+      - "/usr/bin/clang-scan-deps-22.1"
+      - "/bin/clang-scan-deps-22.1"
+      - "/usr/sbin/clang-scan-deps-22.1"
+      - "/sbin/clang-scan-deps-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-22.1"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-22.1"
+      - "/Library/Apple/usr/bin/clang-scan-deps-22.1"
+      - "/usr/local/go/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.cargo/bin/clang-scan-deps-22.1"
+      - "/Users/jacksonslipock/.local/bin/clang-scan-deps-22.1"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps-22"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/clang-scan-deps-22"
+      - "/opt/homebrew/opt/postgresql@18/bin/clang-scan-deps-22"
+      - "/opt/homebrew/opt/openjdk/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/clang-scan-deps-22"
+      - "/Applications/Racket v8.18/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.amplify/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.cabal/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.ghcup/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/miniforge3/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.nix-profile/bin/clang-scan-deps-22"
+      - "/nix/var/nix/profiles/default/bin/clang-scan-deps-22"
+      - "/opt/homebrew/bin/clang-scan-deps-22"
+      - "/opt/homebrew/sbin/clang-scan-deps-22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/clang-scan-deps-22"
+      - "/usr/local/bin/clang-scan-deps-22"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps-22"
+      - "/usr/bin/clang-scan-deps-22"
+      - "/bin/clang-scan-deps-22"
+      - "/usr/sbin/clang-scan-deps-22"
+      - "/sbin/clang-scan-deps-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps-22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps-22"
+      - "/Library/Apple/usr/bin/clang-scan-deps-22"
+      - "/usr/local/go/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.cargo/bin/clang-scan-deps-22"
+      - "/Users/jacksonslipock/.local/bin/clang-scan-deps-22"
+      - "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps22"
+      - "/opt/homebrew/opt/llvm/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.opam/compiler/bin/clang-scan-deps22"
+      - "/opt/homebrew/opt/postgresql@18/bin/clang-scan-deps22"
+      - "/opt/homebrew/opt/openjdk/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/clang-scan-deps22"
+      - "/Applications/Racket v8.18/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.amplify/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.cabal/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.ghcup/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/miniforge3/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.nix-profile/bin/clang-scan-deps22"
+      - "/nix/var/nix/profiles/default/bin/clang-scan-deps22"
+      - "/opt/homebrew/bin/clang-scan-deps22"
+      - "/opt/homebrew/sbin/clang-scan-deps22"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/clang-scan-deps22"
+      - "/usr/local/bin/clang-scan-deps22"
+      - "/System/Cryptexes/App/usr/bin/clang-scan-deps22"
+      - "/usr/bin/clang-scan-deps22"
+      - "/bin/clang-scan-deps22"
+      - "/usr/sbin/clang-scan-deps22"
+      - "/sbin/clang-scan-deps22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/clang-scan-deps22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/clang-scan-deps22"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/clang-scan-deps22"
+      - "/Library/Apple/usr/bin/clang-scan-deps22"
+      - "/usr/local/go/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.cargo/bin/clang-scan-deps22"
+      - "/Users/jacksonslipock/.local/bin/clang-scan-deps22"
+    found: "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake:76 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:32 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_INSTALL_NAME_TOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "install_name_tool"
+    candidate_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/"
+      - "/opt/homebrew/opt/llvm/bin/"
+      - "/opt/homebrew/opt/postgresql@18/bin/"
+      - "/opt/homebrew/opt/openjdk/bin/"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/"
+      - "/Applications/Racket v8.18/bin/"
+      - "/Users/jacksonslipock/.amplify/bin/"
+      - "/Users/jacksonslipock/.cabal/bin/"
+      - "/Users/jacksonslipock/.ghcup/bin/"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/"
+      - "/Users/jacksonslipock/miniforge3/bin/"
+      - "/Users/jacksonslipock/.nix-profile/bin/"
+      - "/nix/var/nix/profiles/default/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/go/bin/"
+      - "/Users/jacksonslipock/.cargo/bin/"
+      - "/Users/jacksonslipock/.local/bin/"
+    searched_directories:
+      - "/Users/jacksonslipock/.opam/compiler/bin/install_name_tool"
+      - "/opt/homebrew/opt/llvm/bin/install_name_tool"
+      - "/opt/homebrew/opt/postgresql@18/bin/install_name_tool"
+      - "/opt/homebrew/opt/openjdk/bin/install_name_tool"
+      - "/Users/jacksonslipock/google-cloud-sdk/bin/install_name_tool"
+      - "/Applications/Racket v8.18/bin/install_name_tool"
+      - "/Users/jacksonslipock/.amplify/bin/install_name_tool"
+      - "/Users/jacksonslipock/.cabal/bin/install_name_tool"
+      - "/Users/jacksonslipock/.ghcup/bin/install_name_tool"
+      - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin/install_name_tool"
+      - "/Users/jacksonslipock/miniforge3/bin/install_name_tool"
+      - "/Users/jacksonslipock/.nix-profile/bin/install_name_tool"
+      - "/nix/var/nix/profiles/default/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.11/bin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jacksonslipock/.opam/compiler/bin"
+        - "/opt/homebrew/opt/llvm/bin"
+        - "/opt/homebrew/opt/postgresql@18/bin"
+        - "/opt/homebrew/opt/openjdk/bin"
+        - "/Users/jacksonslipock/google-cloud-sdk/bin"
+        - "/Applications/Racket v8.18/bin"
+        - "/Users/jacksonslipock/.amplify/bin"
+        - "/Users/jacksonslipock/.cabal/bin"
+        - "/Users/jacksonslipock/.ghcup/bin"
+        - "/Users/jacksonslipock/.nvm/versions/node/v22.20.0/bin"
+        - "/Users/jacksonslipock/miniforge3/bin"
+        - "/Users/jacksonslipock/.nix-profile/bin"
+        - "/nix/var/nix/profiles/default/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.11/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/go/bin"
+        - "/Users/jacksonslipock/.cargo/bin"
+        - "/Users/jacksonslipock/.local/bin"
+        - "/Users/jacksonslipock/.local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB"
+      binary: "/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_499c7/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_499c7.dir/build.make CMakeFiles/cmTC_499c7.dir/build
+        gmake[1]: Entering directory '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB'
+        Building CXX object CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/homebrew/opt/llvm/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Homebrew clang version 22.1.0
+        Target: arm64-apple-darwin23.5.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/22.1.0/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin23.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/jacksonslipock/.config/clang
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-22" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf-no-reserve -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=14.4 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB -resource-dir /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22 -dependency-file CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdwarf2-cfi-asm -o CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 22.1.0 based upon LLVM 22.1.0 default target arm64-apple-darwin23.5.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/SubFrameworks"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1
+         /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_499c7
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_499c7.dir/link.txt --verbose=1
+        Homebrew clang version 22.1.0
+        Target: arm64-apple-darwin23.5.0
+        Thread model: posix
+        InstalledDir: /opt/homebrew/Cellar/llvm/22.1.0/bin
+        Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin23.cfg
+        System configuration file directory: /opt/homebrew/etc/clang
+        User configuration file directory: /Users/jacksonslipock/.config/clang
+         "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/22.1.0/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.4 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_499c7 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1053.12
+        BUILD 15:45:29 Feb  3 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 22.1.0 (static support for 29, runtime is 30)
+        TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.3.2.2)
+        Library search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks
+        /opt/homebrew/opt/llvm/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_499c7
+        gmake[1]: Leaving directory '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1]
+          add: [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1] ==> [/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1]
+        collapse include dir [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include] ==> [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
+        implicit include dirs: [/opt/homebrew/Cellar/llvm/22.1.0/include/c++/v1;/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include;/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_499c7/fast]
+        ignore line: [/opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_499c7.dir/build.make CMakeFiles/cmTC_499c7.dir/build]
+        ignore line: [gmake[1]: Entering directory '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB']
+        ignore line: [Building CXX object CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/homebrew/opt/llvm/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Homebrew clang version 22.1.0]
+        ignore line: [Target: arm64-apple-darwin23.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/22.1.0/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin23.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/jacksonslipock/.config/clang]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-22" -cc1 -triple arm64-apple-macosx14.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf-no-reserve -ffp-contract=on -fno-rounding-math -funwind-tables=1 -target-sdk-version=14.4 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.4a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-m7t7dB -resource-dir /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22 -dependency-file CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -internal-isystem /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include -internal-isystem /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/SubFrameworks -internal-iframework /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdwarf2-cfi-asm -o CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 22.1.0 based upon LLVM 22.1.0 default target arm64-apple-darwin23.5.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/SubFrameworks"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/llvm/22.1.0/bin/../include/c++/v1]
+        ignore line: [ /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_499c7]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_499c7.dir/link.txt --verbose=1]
+        ignore line: [Homebrew clang version 22.1.0]
+        ignore line: [Target: arm64-apple-darwin23.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /opt/homebrew/Cellar/llvm/22.1.0/bin]
+        ignore line: [Configuration file: /opt/homebrew/etc/clang/arm64-apple-darwin23.cfg]
+        ignore line: [System configuration file directory: /opt/homebrew/etc/clang]
+        ignore line: [User configuration file directory: /Users/jacksonslipock/.config/clang]
+        link line: [ "/usr/bin/ld" -demangle -lto_library /opt/homebrew/Cellar/llvm/22.1.0/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 14.0.0 14.4 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_499c7 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/lib/darwin/libclang_rt.osx.a]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/opt/homebrew/Cellar/llvm/22.1.0/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [14.0.0] ==> ignore
+          arg [14.4] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_499c7] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_499c7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /usr/bin/ld
+        Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/opt/homebrew/Cellar/llvm/22.1.0/lib/clang/22/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1053.12
+      BUILD 15:45:29 Feb  3 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s arm64_32 i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 15.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 15.0.0 (tapi-1500.3.2.2)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
+      - "CMakeLists.txt:33 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW"
+      binary: "/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/opt/homebrew/Cellar/llvm/22.1.0/bin/clang-scan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /opt/homebrew/bin/gmake -f Makefile cmTC_ca1b8/fast
+        /opt/homebrew/bin/gmake  -f CMakeFiles/cmTC_ca1b8.dir/build.make CMakeFiles/cmTC_ca1b8.dir/build
+        gmake[1]: Entering directory '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW'
+        Building CXX object CMakeFiles/cmTC_ca1b8.dir/src.cxx.o
+        /opt/homebrew/opt/llvm/bin/clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=c++20 -arch arm64 -MD -MT CMakeFiles/cmTC_ca1b8.dir/src.cxx.o -MF CMakeFiles/cmTC_ca1b8.dir/src.cxx.o.d -o CMakeFiles/cmTC_ca1b8.dir/src.cxx.o -c /Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW/src.cxx
+        Linking CXX executable cmTC_ca1b8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca1b8.dir/link.txt --verbose=1
+        /opt/homebrew/opt/llvm/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ca1b8.dir/src.cxx.o -o cmTC_ca1b8
+        gmake[1]: Leaving directory '/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/CMakeScratch/TryCompile-Hj4qXW'
+        
+      exitCode: 0
+...

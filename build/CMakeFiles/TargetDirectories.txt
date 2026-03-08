@@ -1,0 +1,3 @@
+/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/incrust.dir
+/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/edit_cache.dir
+/Users/jacksonslipock/Desktop/incrust/build/CMakeFiles/rebuild_cache.dir
