@@ -10,13 +10,7 @@
 #include <vector>
 
 // Fixed-size thread pool backed by std::jthread workers (C++20).
-//
-// Design highlights:
-//   • std::jthread handles cleanup automatically — no manual join().
-//   • std::stop_token propagation: each worker checks its stop token so
-//     the pool destructs cleanly even if wait_all() is never called.
-//   • wait_all() blocks until the task queue is drained, making it easy
-//     to use as a barrier between build phases.
+// Destructor requests a stop and lets jthread join automatically.
 
 class ThreadPool {
 public:
@@ -31,8 +25,7 @@ public:
         }
     }
 
-    // Submit a task.  The callable is queued and picked up by the next idle
-    // worker.  Returns immediately (non-blocking).
+    // Queue a task and return immediately.
     void submit(std::function<void()> task) {
         {
             std::scoped_lock lk(mtx_);
@@ -42,17 +35,14 @@ public:
         cv_work_.notify_one();
     }
 
-    // Block the calling thread until every submitted task has completed.
     void wait_all() {
         std::unique_lock lk(mtx_);
         cv_done_.wait(lk, [this] { return pending_ == 0; });
     }
 
-    // Destructor requests all workers to stop, then std::jthread joins them.
     ~ThreadPool() {
         for (auto& w : workers_) w.request_stop();
         cv_work_.notify_all();
-        // std::jthread destructors join automatically — nothing else needed.
     }
 
     std::size_t size() const { return workers_.size(); }
@@ -71,8 +61,7 @@ private:
                 tasks_.pop();
             }
 
-            // Execute outside the lock so other workers can pick up tasks
-            // concurrently.
+            // Execute outside the lock so other workers can pick up tasks concurrently.
             task();
 
             {
@@ -86,7 +75,7 @@ private:
     std::vector<std::jthread>           workers_;
     std::queue<std::function<void()>>   tasks_;
     std::mutex                          mtx_;
-    std::condition_variable             cv_work_;   // signals new work available
-    std::condition_variable             cv_done_;   // signals a task completed
+    std::condition_variable             cv_work_;
+    std::condition_variable             cv_done_;
     int                                 pending_{0};
 };

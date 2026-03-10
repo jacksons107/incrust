@@ -7,21 +7,15 @@
 namespace fs = std::filesystem;
 
 // Abstract base for all content processors.
-// Owned exclusively via unique_ptr<Processor> — RAII + polymorphism story.
 struct Processor {
     virtual ~Processor() = default;
 
-    // Read src, transform, write to dst.
     virtual void process(const fs::path& src, const fs::path& dst) = 0;
-
-    // Human-readable name for logging.
     virtual std::string_view name() const = 0;
 };
 
-// Forward declarations of concrete processors (implemented in processor.cpp)
 struct MarkdownProcessor : Processor {
-    // Optional layout template path injected at construction time.
-    // If set, the rendered HTML body is inserted into the layout's {{content}} slot.
+    // If layout is set, the rendered HTML body is injected into its {{content}} slot.
     explicit MarkdownProcessor(fs::path layout = {}) : layout_(std::move(layout)) {}
 
     void process(const fs::path& src, const fs::path& dst) override;
@@ -36,8 +30,7 @@ struct CopyProcessor : Processor {
     std::string_view name() const override { return "CopyProcessor"; }
 };
 
-// Template processor: reads an .html template, substitutes {{key}} tokens
-// using a variable map supplied at build time.
+// Reads an .html template and substitutes {{key}} tokens using a variable map.
 struct TemplateProcessor : Processor {
     using VarMap = std::unordered_map<std::string, std::string>;
 

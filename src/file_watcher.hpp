@@ -16,29 +16,16 @@
 
 namespace fs = std::filesystem;
 
-// Producer/consumer file watcher.
-//
-// A single std::jthread polls every tracked path's last_write_time at a
-// configurable interval (default 500 ms).  When a change is detected the
-// node's ID is pushed onto a shared queue.
-//
-// The main thread calls pop_dirty() to drain the queue and schedule rebuilds.
-//
-//   [jthread: poll loop] ──(mutex + cv)──► [queue<NodeId>]
-//                                                ▲
-//                                    main thread drain via pop_dirty()
+// Polls tracked file mtimes on a background jthread and pushes dirty node IDs
+// onto a queue. The main thread drains it via pop_dirty().
 
 class FileWatcher {
 public:
     using Clock    = std::chrono::steady_clock;
     using Duration = std::chrono::milliseconds;
 
-    // Register a set of (path → nodeId) pairs to watch.
-    // The watcher thread is NOT started here — call start() explicitly so that
-    // the graph can be fully populated before watching begins.
     FileWatcher() = default;
 
-    // Register a single file.  May be called before or after start().
     void watch(const fs::path& path, const NodeId& id) {
         std::scoped_lock lk(mtx_);
         auto mtime = fs::exists(path) ? fs::last_write_time(path)
@@ -46,12 +33,10 @@ public:
         entries_[path.string()] = Entry{ id, mtime };
     }
 
-    // Register many files at once.
     void watch_many(const std::vector<std::pair<fs::path, NodeId>>& files) {
         for (const auto& [p, id] : files) watch(p, id);
     }
 
-    // Start the background polling thread.
     void start(Duration interval = Duration{500}) {
         interval_ = interval;
         watcher_thread_ = std::jthread([this](std::stop_token st) {
@@ -59,14 +44,11 @@ public:
         });
     }
 
-    // Stop the watcher (the jthread destructor will also stop it, but this
-    // lets callers stop explicitly without destroying the object).
     void stop() {
         watcher_thread_.request_stop();
     }
 
-    // Non-blocking drain: pops one dirty node ID from the queue.
-    // Returns true and writes to `out` if a dirty node was available.
+    // Pop one dirty node ID. Returns false if queue is empty.
     bool pop_dirty(NodeId& out) {
         std::scoped_lock lk(mtx_);
         if (dirty_queue_.empty()) return false;
@@ -75,8 +57,7 @@ public:
         return true;
     }
 
-    // Block until at least one dirty event arrives (or timeout elapses).
-    // Returns true if an event is available, false on timeout.
+    // Block until a dirty event arrives or timeout elapses.
     bool wait_for_dirty(Duration timeout = Duration{1000}) {
         std::unique_lock lk(mtx_);
         return cv_.wait_for(lk, timeout, [this] {
@@ -84,7 +65,6 @@ public:
         });
     }
 
-    // Destructor — jthread joins automatically; no manual cleanup needed.
     ~FileWatcher() = default;
 
 private:
@@ -117,6 +97,6 @@ private:
 
     std::mutex                                 mtx_;
     std::condition_variable                    cv_;
-    std::unordered_map<std::string, Entry>     entries_;   // guarded by mtx_
-    std::queue<NodeId>                         dirty_queue_; // guarded by mtx_
+    std::unordered_map<std::string, Entry>     entries_;
+    std::queue<NodeId>                         dirty_queue_;
 };

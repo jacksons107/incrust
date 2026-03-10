@@ -8,23 +8,12 @@
 
 namespace fs = std::filesystem;
 
-// Persistent key→hash store backed by a flat text file (.incrust_cache).
-//
-// File format — one entry per line:
-//   <node-id>=<hex-hash>
-//
-// Example:
-//   content/index.md=a3f5c2d1
-//   templates/base.html=9b12e044
-//
-// Thread safety: NOT thread-safe on its own.  The thread pool calls
-// HashStore::set() from worker threads, so callers must synchronise
-// externally (a per-store std::mutex in main.cpp is sufficient).
+// Persistent key→hash store backed by a flat text file.
+// Format: one "<node-id>=<hex-hash>" entry per line.
+// Not thread-safe; callers must synchronise externally when using worker threads.
 
 class HashStore {
 public:
-    // ── Persistence ──────────────────────────────────────────────────────────
-
     void load(const fs::path& cache_file) {
         cache_path_ = cache_file;
         store_.clear();
@@ -51,10 +40,7 @@ public:
             f << key << '=' << hash << '\n';
     }
 
-    // Convenience overload — save to the path used at load time.
     void save() const { save(cache_path_); }
-
-    // ── Accessors ─────────────────────────────────────────────────────────────
 
     // Returns the stored hash for key, or "" if not found.
     [[nodiscard]] std::string get(const std::string& key) const {
@@ -68,11 +54,7 @@ public:
 
     bool has(const std::string& key) const { return store_.contains(key); }
 
-    // ── Static file hashing ───────────────────────────────────────────────────
-
-    // Returns a hex string representing a fast non-cryptographic hash of the
-    // file contents.  We use FNV-1a (64-bit) — no external dependencies and
-    // more than sufficient for change detection.
+    // FNV-1a (64-bit) hash of a file's contents — fast and dependency-free.
     [[nodiscard]] static std::string hash_file(const fs::path& path) {
         std::ifstream f(path, std::ios::binary);
         if (!f.is_open()) return "";
@@ -89,7 +71,6 @@ public:
             }
         }
 
-        // Format as 16-char hex string.
         std::ostringstream oss;
         oss << std::hex << hash;
         return oss.str();

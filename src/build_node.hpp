@@ -10,27 +10,21 @@
 
 namespace fs = std::filesystem;
 
-// Stable identifier for a node in the build graph.
-// Using the source path string as the canonical ID keeps things human-readable
-// and makes cache keys trivially derivable.
+// Stable identifier for a node; uses the source path string as the canonical key.
 using NodeId = std::string;
 
-// ─── Abstract base ────────────────────────────────────────────────────────────
-
 struct BuildNode {
-    NodeId      id;           // unique key == src.string()
-    fs::path    src;          // input path
-    fs::path    dst;          // output path
-    std::string cached_hash;  // last hash seen (loaded from HashStore)
+    NodeId      id;
+    fs::path    src;
+    fs::path    dst;
+    std::string cached_hash;
 
     // IDs of nodes this node depends on; must be built first.
     std::vector<NodeId> deps;
 
-    // The build action is a std::function<void()> so the graph can dispatch it
-    // to a thread pool without knowing anything about the node type.
+    // Callable dispatched to the thread pool; set by each concrete subclass.
     std::function<void()> build_action;
 
-    // Virtual destructor keeps unique_ptr<BuildNode> well-behaved.
     virtual ~BuildNode() = default;
 
     virtual std::string_view node_type() const = 0;
@@ -40,11 +34,9 @@ protected:
         : id(std::move(id_)), src(std::move(src_)), dst(std::move(dst_)) {}
 };
 
-// ─── Concrete node types ──────────────────────────────────────────────────────
-
 // Renders a Markdown source file to HTML, optionally wrapped in a layout.
 struct MarkdownNode : BuildNode {
-    std::unique_ptr<Processor> renderer;  // owns a MarkdownProcessor
+    std::unique_ptr<Processor> renderer;
 
     MarkdownNode(NodeId id, fs::path src, fs::path dst,
                  std::unique_ptr<Processor> proc)
@@ -60,9 +52,9 @@ struct MarkdownNode : BuildNode {
     std::string_view node_type() const override { return "MarkdownNode"; }
 };
 
-// Applies a template layout (substitutes {{content}} and other tokens).
+// Applies {{content}} and other token substitutions to a layout template.
 struct TemplateNode : BuildNode {
-    std::unique_ptr<Processor> engine;   // owns a TemplateProcessor
+    std::unique_ptr<Processor> engine;
 
     TemplateNode(NodeId id, fs::path src, fs::path dst,
                  std::unique_ptr<Processor> proc)
@@ -78,9 +70,9 @@ struct TemplateNode : BuildNode {
     std::string_view node_type() const override { return "TemplateNode"; }
 };
 
-// Passthrough copy (or future minification) for static assets.
+// Copies a static asset verbatim to the output directory.
 struct AssetNode : BuildNode {
-    std::unique_ptr<Processor> copier;   // owns a CopyProcessor
+    std::unique_ptr<Processor> copier;
 
     AssetNode(NodeId id, fs::path src, fs::path dst,
               std::unique_ptr<Processor> proc)

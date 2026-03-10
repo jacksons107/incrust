@@ -16,8 +16,6 @@
 
 namespace fs = std::filesystem;
 
-// ─── CLI help ─────────────────────────────────────────────────────────────────
-
 static void print_usage(const char* argv0) {
     std::cout
         << "Usage: " << argv0 << " [OPTIONS] <source-dir> <output-dir>\n\n"
@@ -28,14 +26,11 @@ static void print_usage(const char* argv0) {
         << "  --help           Show this message\n";
 }
 
-// ─── Site scanning ────────────────────────────────────────────────────────────
-
 // Walk source_dir and populate the graph.
-//
 // Convention:
-//   content/**/*.md   → MarkdownNode  (rendered through templates/base.html if present)
-//   templates/**/*    → TemplateNode  (treated as dependencies, not built directly)
-//   assets/**/*       → AssetNode     (copied verbatim)
+//   content/**/*.md  → MarkdownNode  (rendered through templates/base.html if present)
+//   templates/**/*   → TemplateNode  (dependency only, not built directly)
+//   assets/**/*      → AssetNode     (copied verbatim)
 static void scan_site(BuildGraph<BuildNode>& graph,
                       FileWatcher&           watcher,
                       const fs::path&        source_dir,
@@ -46,7 +41,6 @@ static void scan_site(BuildGraph<BuildNode>& graph,
     const fs::path assets_dir   = source_dir / "assets";
     const fs::path layout       = templates_dir / "base.html";
 
-    // ── Template nodes (layout files) ────────────────────────────────────────
     if (fs::exists(templates_dir)) {
         for (const auto& entry : fs::recursive_directory_iterator(templates_dir)) {
             if (!entry.is_regular_file()) continue;
@@ -63,7 +57,6 @@ static void scan_site(BuildGraph<BuildNode>& graph,
         }
     }
 
-    // ── Content nodes (Markdown) ──────────────────────────────────────────────
     if (fs::exists(content_dir)) {
         for (const auto& entry : fs::recursive_directory_iterator(content_dir)) {
             if (!entry.is_regular_file()) continue;
@@ -81,7 +74,7 @@ static void scan_site(BuildGraph<BuildNode>& graph,
 
             auto node = std::make_unique<MarkdownNode>(id, src, dst, std::move(proc));
 
-            // Depend on the layout template so a layout change rebuilds all pages.
+            // Depend on the layout so a layout change rebuilds all pages.
             if (fs::exists(layout)) {
                 const NodeId layout_id = layout.lexically_relative(source_dir).string();
                 if (graph.has_node(layout_id))
@@ -93,7 +86,6 @@ static void scan_site(BuildGraph<BuildNode>& graph,
         }
     }
 
-    // ── Asset nodes (static files) ────────────────────────────────────────────
     if (fs::exists(assets_dir)) {
         for (const auto& entry : fs::recursive_directory_iterator(assets_dir)) {
             if (!entry.is_regular_file()) continue;
@@ -111,10 +103,7 @@ static void scan_site(BuildGraph<BuildNode>& graph,
     }
 }
 
-// ─── main ─────────────────────────────────────────────────────────────────────
-
 int main(int argc, char* argv[]) {
-    // ── Argument parsing ──────────────────────────────────────────────────────
     bool        watch_mode  = false;
     int         serve_port  = 0;    // 0 = don't serve
     std::size_t jobs        = std::thread::hardware_concurrency();
@@ -127,7 +116,6 @@ int main(int argc, char* argv[]) {
         if (arg == "--watch") {
             watch_mode = true;
         } else if (arg == "--serve") {
-            // Optional port number immediately follows --serve.
             if (i + 1 < argc && std::isdigit(static_cast<unsigned char>(argv[i + 1][0])))
                 serve_port = std::stoi(argv[++i]);
             else
@@ -162,7 +150,6 @@ int main(int argc, char* argv[]) {
 
     fs::create_directories(output_dir);
 
-    // ── Initialise subsystems ─────────────────────────────────────────────────
     HashStore   store;
     store.load(cache_path);
 
@@ -173,19 +160,16 @@ int main(int argc, char* argv[]) {
     FileWatcher           watcher;
 
     scan_site(graph, watcher, source_dir, output_dir);
-    graph.mark_all_dirty();  // first run: assume everything is dirty
+    graph.mark_all_dirty();
 
-    // Mutex protecting HashStore from concurrent set() calls in worker threads.
-    // (HashStore itself is not thread-safe.)
+    // HashStore is not thread-safe; workers call set() under this mutex.
     std::mutex store_mtx;
 
-    // ── Initial build ─────────────────────────────────────────────────────────
     std::cout << "[incrust] building site: " << source_dir << " → " << output_dir << "\n";
     graph.rebuild_all(pool, store);
     store.save(cache_path);
     std::cout << "[incrust] build complete.\n";
 
-    // ── HTTP server (optional) ────────────────────────────────────────────────
     // Constructed here so it outlives both the watch loop and its own jthread.
     std::unique_ptr<HttpServer> server;
     if (serve_port > 0) {
@@ -195,15 +179,12 @@ int main(int argc, char* argv[]) {
 
     if (!watch_mode && !server) return 0;
 
-    // If serving but not watching, just block until Ctrl-C.
     if (!watch_mode) {
         std::cout << "[incrust] serving — press Ctrl-C to quit\n";
-        // Park the main thread; the server jthread runs independently.
         std::this_thread::sleep_until(std::chrono::steady_clock::time_point::max());
         return 0;
     }
 
-    // ── Watch loop ────────────────────────────────────────────────────────────
     std::cout << "[incrust] watching for changes (Ctrl-C to quit)...\n";
     watcher.start(std::chrono::milliseconds{300});
 

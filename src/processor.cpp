@@ -10,8 +10,6 @@
 
 namespace fs = std::filesystem;
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
 static std::string read_file(const fs::path& path) {
     std::ifstream f(path);
     if (!f.is_open())
@@ -42,18 +40,8 @@ static std::string apply_vars(std::string text,
     return text;
 }
 
-// ─── Markdown renderer ────────────────────────────────────────────────────────
-//
-// Single-pass line-oriented renderer.  Supported syntax:
-//   # – ###### ATX headings
-//   **bold**, *italic*, `inline code`
-//   ```...``` fenced code blocks
-//   --- horizontal rule
-//   Blank-line delimited paragraphs
-//   - list items (unordered)
-//
-// This is intentionally minimal — the goal is to demonstrate modern C++ idioms,
-// not to replace a full CommonMark implementation.
+// Single-pass line-oriented Markdown renderer.
+// Supports ATX headings, **bold**, *italic*, `code`, fenced blocks, lists, and <hr>.
 
 static std::string escape_html(const std::string& s) {
     std::string out;
@@ -70,9 +58,8 @@ static std::string escape_html(const std::string& s) {
     return out;
 }
 
-// Apply inline markup: **bold**, *italic*, `code`
+// Process ** before * to avoid partial matches.
 static std::string render_inline(const std::string& line) {
-    // Order matters: process ** before * to avoid partial matches.
     static const std::regex bold  (R"(\*\*(.+?)\*\*)");
     static const std::regex italic(R"(\*(.+?)\*)");
     static const std::regex code  (R"(`(.+?)`)");
@@ -101,7 +88,7 @@ static std::string render_markdown(const std::string& src) {
     };
 
     while (std::getline(in, line)) {
-        // ── Fenced code block ────────────────────────────────────────────────
+        // fenced code block
         if (line.starts_with("```")) {
             if (!in_code_block) {
                 close_paragraph();
@@ -119,7 +106,7 @@ static std::string render_markdown(const std::string& src) {
             continue;
         }
 
-        // ── ATX headings ─────────────────────────────────────────────────────
+        // ATX headings
         if (line.starts_with("#")) {
             close_paragraph();
             close_list();
@@ -133,7 +120,7 @@ static std::string render_markdown(const std::string& src) {
             continue;
         }
 
-        // ── Horizontal rule ───────────────────────────────────────────────────
+        // horizontal rule
         if (line == "---" || line == "***") {
             close_paragraph();
             close_list();
@@ -141,7 +128,7 @@ static std::string render_markdown(const std::string& src) {
             continue;
         }
 
-        // ── Unordered list item ───────────────────────────────────────────────
+        // list items
         if (line.starts_with("- ") || line.starts_with("* ")) {
             close_paragraph();
             if (!in_list) { out << "<ul>\n"; in_list = true; }
@@ -149,32 +136,30 @@ static std::string render_markdown(const std::string& src) {
             continue;
         }
 
-        // ── Blank line ────────────────────────────────────────────────────────
+        // blank line
         if (line.empty()) {
             close_paragraph();
             close_list();
             continue;
         }
 
-        // ── Paragraph text ────────────────────────────────────────────────────
+        // paragraph
         close_list();
         if (!in_paragraph) {
             out << "<p>";
             in_paragraph = true;
         } else {
-            out << ' ';   // join continuation lines with a space
+            out << ' ';
         }
         out << render_inline(line);
     }
 
     close_paragraph();
     close_list();
-    if (in_code_block) out << "</code></pre>\n";  // unterminated block — close it
+    if (in_code_block) out << "</code></pre>\n";
 
     return out.str();
 }
-
-// ─── MarkdownProcessor ────────────────────────────────────────────────────────
 
 void MarkdownProcessor::process(const fs::path& src, const fs::path& dst) {
     const std::string md   = read_file(src);
@@ -182,7 +167,6 @@ void MarkdownProcessor::process(const fs::path& src, const fs::path& dst) {
 
     std::string output;
     if (!layout_.empty() && fs::exists(layout_)) {
-        // Inject body HTML into the layout's {{content}} slot.
         const std::string tmpl = read_file(layout_);
         std::unordered_map<std::string,std::string> vars{
             {"content", body},
@@ -199,13 +183,9 @@ void MarkdownProcessor::process(const fs::path& src, const fs::path& dst) {
     write_file(dst, output);
 }
 
-// ─── CopyProcessor ────────────────────────────────────────────────────────────
-
 void CopyProcessor::process(const fs::path& src, const fs::path& dst) {
     fs::copy_file(src, dst, fs::copy_options::overwrite_existing);
 }
-
-// ─── TemplateProcessor ───────────────────────────────────────────────────────
 
 void TemplateProcessor::process(const fs::path& src, const fs::path& dst) {
     std::string text = read_file(src);
