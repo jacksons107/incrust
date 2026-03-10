@@ -10,17 +10,6 @@ rebuilds automatically.
 
 ---
 
-## Quick Start
-
-### Prerequisites
-
-- CMake 3.20+
-- A C++20-capable compiler. On macOS, Homebrew LLVM is recommended:
-
-```bash
-brew install llvm cmake
-```
-
 ### Build
 
 ```bash
